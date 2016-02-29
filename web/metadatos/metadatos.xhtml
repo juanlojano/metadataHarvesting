@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
+
+    <!-- Panel para los Telefonos de una Persona --> 
+    <p:panel id="metadatosPan" 
+             header="Repositorio"
+             style="border: 0">   
+        <h:panelGrid id="metadatosGri" columns="1">            
+            <f:facet name="header">
+                <h:outputLabel value="METADATOS"/>
+            </f:facet>
+            <p:inputTextarea rows="6" cols="33" value="#{metadataController.selectedMetadatos}" />
+        </h:panelGrid>
+    </p:panel>
+
+</ui:composition>

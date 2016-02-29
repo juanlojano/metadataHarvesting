@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
+
+    <!-- Panel para los Telefonos de una Persona --> 
+    <p:panel id="objetoPan" 
+             header="Repositorio"
+             style="border: 0">   
+        <h:panelGrid id="objetoGri" columns="1">            
+            <f:facet name="header">
+                <h:outputLabel value="LISTA"/>
+            </f:facet>
+            <p:dataTable id="objetoDatalist" value="#{metadataController.itemsLO}" var="item"
+                         selectionMode="single" selection="#{metadataController.selectedLO}"
+                                 paginator="true"
+                                 rowKey="#{item}"
+                                 rows="10"
+                                 rowsPerPageTemplate="10,20,30,40,50"
+                                 >
+
+                        
+
+                        <p:column>
+                            <f:facet name="header">
+                                <h:outputText value="Objeto"/>
+                            </f:facet>
+                            <h:outputText value="#{item}"/>
+                        </p:column>
+                    </p:dataTable>
+        </h:panelGrid>
+    </p:panel>
+
+</ui:composition>
